@@ -24,7 +24,6 @@ It is composed of:
 
 | File                                     | Description                                      |
 |------------------------------------------|--------------------------------------------------|
-| `Netman.exe`                             | Standalone desktop application (GUI)             |
 | `logo.ico`                               | Icon used by the `.exe` and desktop shortcuts    |
 | `logo.png`                               | Displayed in the UI header                       |
 | `network_card_app.py`                    | Source code of the GUI (Tkinter)                 |
