@@ -143,19 +143,5 @@ You only need to distribute the following:
 
 ---
 
-## ✅ Recommended Next Steps (optional)
-
-- 🔁 Log `netsh` commands to:  
-  `C:\logs\network_backend.log`
-- 🌐 Add support for DNS configuration:  
-  `netsh interface ip set dns name="X" static 8.8.8.8`
-- 🛠 Package with an installer (Inno Setup or NSIS) for:
-  - Start Menu + Desktop shortcut
-  - Backend service auto-installation
-  - Uninstall support
-- 🔒 Add token or ACL security if backend is ever exposed externally
-
----
-
 **Created by CALLET Alexis**  
 _This app is licensed under the MIT License._
