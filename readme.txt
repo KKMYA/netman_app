@@ -1,4 +1,4 @@
-# 🖥️ Netman – Network Interface Manager (v3.0)
+# Netman – Network Interface Manager (v3.0)
 
 > **Created by CALLET Alexis**  
 > _This app is licensed under the MIT License._
