@@ -9,13 +9,13 @@
 
 **Netman** is a Windows desktop application that lets users configure local network interfaces via a simple GUI. It supports:
 
-- ✅ Static IPv4 address configuration
-- ✅ Dynamic (DHCP) switching
-- ✅ Optional gateway handling
-- ✅ CIDR to netmask conversion
+- ✅ Static IPv4 address configuration  
+- ✅ Dynamic (DHCP) switching  
+- ✅ Optional gateway handling  
+- ✅ CIDR to netmask conversion  
 
-It is composed of:
-1. A standalone graphical app: `Netman.exe`
+It is composed of:  
+1. A standalone graphical app: `Netman.exe`  
 2. A backend REST service: `network_backend_service_windows.py` (runs as a Windows service)
 
 ---
@@ -34,8 +34,8 @@ It is composed of:
 
 ## ⚙️ Prerequisites
 
-- Windows 10/11 (64-bit)
-- Administrator rights (for backend service)
+- Windows 10/11 (64-bit)  
+- Administrator rights (for backend service)  
 - **Python 3.11+** (only needed for backend installation)
 
 ---
@@ -62,6 +62,20 @@ py -3.11 network_backend_service_windows.py start
 
 > ℹ️ `--startup auto` ensures the backend launches automatically on system boot.
 
+### 🔄 Alternative: Run the Backend as a Compiled `.exe`
+
+If you prefer to run the backend as a standalone `.exe` (e.g., `network_backend_service_windows.exe`) instead of using Python:
+
+```
+# Open Command Prompt as Administrator
+network_backend_service_windows.exe install
+network_backend_service_windows.exe start
+```
+
+- The service will automatically start at system boot.  
+- Stop the service: `network_backend_service_windows.exe stop`  
+- Remove the service: `network_backend_service_windows.exe remove`
+
 ### Service management
 
 ```
@@ -82,7 +96,7 @@ py network_backend_service_windows.py remove
 2. Select an active interface from the dropdown  
 3. Enter IPv4, mask (CIDR or full netmask), and optional gateway  
 4. Click:
-   - **Apply** → for static IP configuration
+   - **Apply** → for static IP configuration  
    - **Enable DHCP** → to switch to dynamic mode
 
 ---
@@ -126,8 +140,8 @@ POST http://localhost:8000/interfaces/<interface_name>
 
 You only need to distribute the following:
 
-- `Netman.exe` (compiled with PyInstaller `--onefile`)
-- `logo.png` (used inside the GUI)
+- `Netman.exe` (compiled with PyInstaller `--onefile`)  
+- `logo.png` (used inside the GUI)  
 - `logo.ico` (optional, for Windows shortcut)
 
 > ✅ Python is **not required** on client machines. The `.exe` runs standalone from any folder or USB stick.
